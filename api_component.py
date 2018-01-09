@@ -32,14 +32,15 @@ if os.path.isfile("apple_raw") == False or os.path.isfile("apple_raw.csv") == Fa
 	apple_raw = requests.get(target_url).json()
 
 	#Save JSON response to file
-	with open('raw_data/apple_raw','w+') as outfile:
+	with open('apple_raw','w+') as outfile:
 		json.dump(apple_raw, outfile,indent=4, sort_keys=True)
 
 	#Save JSON response to CSV
 	df = pd.DataFrame.from_dict(apple_raw["Time Series (Daily)"], orient='index')
 	df.reset_index(inplace=True)
 	df = df.rename(columns={"index":"timestamp","1. open":"open","2. high":"high","3. low":"low","4. close":"close","5. volume":"volume"})
-	df.to_csv("apple_raw.csv",index = False)
+	df['timestamp'] = df['timestamp'].astype('datetime64[ns]')
+	df.to_csv("apple_raw.csv",date_format="%Y-%m-%d",index = False)
 
 #Check if apple_raw_rsi and apple_raw_rsi.csv exists
 if os.path.isfile("apple_raw_rsi") == False or os.path.isfile("apple_raw_rsi.csv") == False:
@@ -58,7 +59,8 @@ if os.path.isfile("apple_raw_rsi") == False or os.path.isfile("apple_raw_rsi.csv
 	df_rsi = pd.DataFrame.from_dict(apple_raw_rsi["Technical Analysis: RSI"], orient='index')
 	df_rsi.reset_index(inplace=True)
 	df_rsi = df_rsi.rename(columns={"index":"timestamp"})
-	df_rsi.to_csv("apple_raw_rsi.csv",index = False)
+	df_rsi['timestamp'] = df_rsi['timestamp'].astype('datetime64[ns]')
+	df_rsi.to_csv("apple_raw_rsi.csv",date_format="%Y-%m-%d",index = False, )
 
 ###Parse data
 
