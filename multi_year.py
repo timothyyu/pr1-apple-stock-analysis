@@ -19,12 +19,14 @@ stock_pd.drop(['open','high','low'],axis = 1, inplace = True)
 stock_pd.set_index('timestamp',inplace=True)
 
 #Multi-year color chart closing price (all three years)
-stock_pd.truncate(before=str('2017-01-01'), after=str('2017-12-31'))['close'].plot(figsize=(16, 12))
-stock_pd.truncate(before=str('2016-01-01'), after=str('2016-12-31'))['close'].plot(figsize=(16, 12))
-stock_pd.truncate(before=str('2015-01-01'), after=str('2015-12-31'))['close'].plot(figsize=(16, 12))
-
+stock_pd.truncate(before=str('2017-01-01'), after=str('2017-12-31'))['close'].plot(figsize=(16, 12), color="red")
+stock_pd.truncate(before=str('2016-01-01'), after=str('2016-12-31'))['close'].plot(figsize=(16, 12), color="purple")
+stock_pd.truncate(before=str('2015-01-01'), after=str('2015-12-31'))['close'].plot(figsize=(16, 12), color="orange")
+plt.savefig('2015-2017 close.png')
 plt.show()
-plt.savefig('2015-2017 close')
+
+
+
 
 '''
 #Individual year and closing price
