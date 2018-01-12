@@ -25,7 +25,7 @@ stock_pd.truncate(before=str('2015-01-01'), after=str('2015-12-31'))['close'].pl
 plt.title("Apple Stock Closing Price between Year 2015 - 2017")
 plt.xlabel("Year 2015 - 2017")
 plt.ylabel("Stock Closing Price ($)")
-plt.savefig('2015-2017 close.png')
+plt.savefig('2015-2017 Apple close single chart.png')
 plt.show()
 
 
