@@ -60,7 +60,7 @@ if os.path.isfile("apple_raw_rsi") == False or os.path.isfile("apple_raw_rsi.csv
 	df_rsi.reset_index(inplace=True)
 	df_rsi = df_rsi.rename(columns={"index":"timestamp"})
 	df_rsi['timestamp'] = df_rsi['timestamp'].astype('datetime64[ns]')
-	df_rsi.to_csv("apple_raw_rsi.csv",date_format="%Y-%m-%d",index = False, )
+	df_rsi.to_csv("apple_raw_rsi.csv",date_format="%Y-%m-%d",index = False)
 
 ###Parse data
 
