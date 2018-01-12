@@ -120,6 +120,7 @@ labels[10] = 'Nov'
 labels[11] = 'Dec'
 
 ax.set_xticklabels(labels)
+pp.savefig('2015-2017 Apple close price.png')
 pp.show()
 
 ###############
@@ -128,16 +129,16 @@ pp.show()
 
 pp.subplot(3,1,1)
 pp.ylim(20,100)
-pp.axhline(y=30)
-pp.axhline(y=70)
+pp.axhline(y=30, linestyle =':')
+pp.axhline(y=70, linestyle =':')
 pp.ylabel("RSI Index - " + "AAPL")
 pp.xticks(x_pos, month_ticks)
 rsi_pd1.truncate(before=str('2017-01-01'), after=str('2017-12-31'))['RSI'].plot(figsize=(12,12), color="red")
 
 pp.subplot(3,1,2)
 pp.ylim(20,100)
-pp.axhline(y=30)
-pp.axhline(y=70)
+pp.axhline(y=30,linestyle =':')
+pp.axhline(y=70,linestyle =':')
 pp.ylabel("RSI Index - " + "AAPL")
 pp.xticks(x_pos, month_ticks)
 #pp.axhline(y=30, color='r', linestyle='-')
@@ -146,8 +147,8 @@ rsi_pd2.truncate(before=str('2016-01-01'), after=str('2016-12-31'))['RSI'].plot(
 
 pp.subplot(3,1,3)
 pp.ylim(20,100)
-pp.axhline(y=30)
-pp.axhline(y=70)
+pp.axhline(y=30,linestyle =':')
+pp.axhline(y=70, linestyle =':')
 pp.ylabel("RSI Index - " + "AAPL")
 pp.xticks(x_pos, month_ticks)
 
@@ -215,7 +216,7 @@ labels[10] = 'Nov'
 labels[11] = 'Dec'
 
 ax.set_xticklabels(labels)
-
+pp.savefig('2015-2017 Apple RSI.png')
 pp.show()
 
 #################
@@ -308,7 +309,7 @@ labels[11] = 'Dec'
 
 ax.set_xticklabels(labels)
 
-
+pp.savefig('2015-2017 Apple volume.png')
 pp.show()
 
 
