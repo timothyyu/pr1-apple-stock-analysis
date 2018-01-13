@@ -1,4 +1,4 @@
-# 
+
 
 #Summary of major findings (project-one, "Analyzing for “Hidden Patterns” in Apple’s Stock Market Data")
 
@@ -26,7 +26,6 @@ Component to parse data from CSV and visualize closing price for a stock over th
 ### data_clean_up_analysis.ipynb
 
 Juptyer Notebook summarizing the data exploration, data cleanup, and final analysis of this project. 
-
 
 
 ## 
