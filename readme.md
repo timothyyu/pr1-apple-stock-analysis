@@ -1,6 +1,4 @@
-
-
-#Summary of major findings (project-one, "Analyzing for “Hidden Patterns” in Apple’s Stock Market Data")
+Summary of major findings (project-one, "Analyzing for “Hidden Patterns” in Apple’s Stock Market Data")
 
 1. Are there certain months that are better for buying or selling Apple Stock? 
    - Mid January to Mid February for is potentially better for buying, and the beginning to the Midpoint of October for potentially selling. This is supported by looking at the closing price and RSI for those periods on three year timeframe. However, more in-depth analysis is required to answer this question more sufficiently (more than 3 years of data, and price action data including the Open, High, and Low).
