@@ -4,6 +4,7 @@ Summary of major findings (project-one, "Analyzing for “Hidden Patterns” in 
    - Mid January to Mid February for is potentially better for buying, and the beginning to the Midpoint of October for potentially selling. This is supported by looking at the closing price and RSI for those periods on three year timeframe. However, more in-depth analysis is required to answer this question more sufficiently (more than 3 years of data, and price action data including the Open, High, and Low).
 2. Is Apple currently overbought or oversold based selected historical data (i.e. 2015-2017)?
    - Based upon selected historical data, and with the RSI indicator ranging above 50 (and oscillating between 50 and 70+, Apple could be considered ranging more toward overbought. 
+   - [RSI (Relative Strength Index) Technical Indicator Information](https://www.fidelity.com/learning-center/trading-investing/technical-analysis/technical-indicator-guide/RSI)
 3. Does the RSI give more accurate signals on a larger timeframe than on a smaller timeframe in identifying overbought and oversold conditions for Apple stock?
 4. Is it possible to do any predictive analysis based on these patterns? (linear regression/line fit?)
 
